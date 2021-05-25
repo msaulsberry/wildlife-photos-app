@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
-  styleUrls: ['./feed.component.css']
+  styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
 

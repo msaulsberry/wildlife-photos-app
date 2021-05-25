@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BlobServiceClient, ContainerClient} from '@azure/storage-blob';
 
-// const sasToken = process.env.AZURE_SAS || "";
 const containerName = `wildlifephotos`;
-// const storageAccountName = process.env.AZURE_STORAGE || ""; 
 
 @Injectable({
   providedIn: 'root'
