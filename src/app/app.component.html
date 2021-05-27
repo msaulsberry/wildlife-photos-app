@@ -1,11 +1,13 @@
-<button *ngIf="!isAuthenticated" (click)="login()">Login</button>
-<button *ngIf="isAuthenticated" (click)="logout()">Logout</button>
-
 <div class="header">
-  <h1>Header for the site</h1>
+  <h1 class="logo">Wildlife Photos</h1>
+  <div class="divider"></div>
+  <button class="menu-btn">Locations</button>
+  <button class="menu-btn">Species</button>
+  <button *ngIf="!isAuthenticated" (click)="login()">Login</button>
+  <button *ngIf="isAuthenticated" (click)="logout()">Logout</button>
 </div>
 
-<div>
+<div class="main-content">
   <router-outlet></router-outlet>
 </div>
 

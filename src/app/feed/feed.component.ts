@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OktaAuthService } from '@okta/okta-angular';
 import { FileUploadService } from 'src/file-upload.service';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,7 +10,14 @@ import { v4 as uuidv4 } from 'uuid';
 })
 export class FeedComponent implements OnInit {
 
-  constructor(private uploadService: FileUploadService) { }
+  isAuthenticated: boolean;
+  creatingPost: boolean;
+
+  constructor(private uploadService: FileUploadService, private oktaAuth: OktaAuthService) { 
+    this.oktaAuth.$authenticationState.subscribe(
+      (isAuthenticated: boolean)  => this.isAuthenticated = isAuthenticated
+    );
+  }
 
   ngOnInit(): void {
   }
@@ -27,6 +35,10 @@ export class FeedComponent implements OnInit {
 
       this.uploadService.uploadFileToBlob(renamedFile);
     }
+  }
+
+  onCreatePost() {
+    this.creatingPost = true;
   }
 
 }

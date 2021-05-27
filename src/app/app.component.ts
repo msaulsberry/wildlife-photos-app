@@ -30,9 +30,8 @@ export class AppComponent {
   async ngOnInit() {
     // get authentication state for immediate use
     this.isAuthenticated = await this.oktaAuth.isAuthenticated();
-
     localStorage.setItem('token', this.oktaAuth.getAccessToken())
-
+    
     if (this.isAuthenticated) {
       this.querySubscription = this.apollo.watchQuery<any>({
         query: GET_SAS
@@ -42,7 +41,6 @@ export class AppComponent {
             localStorage.setItem('sasToken', data.getSas);
         });
     }
-    console.log(localStorage.getItem('sasToken'));
   }
   async login() {
     await this.oktaAuth.signInWithRedirect();
@@ -50,6 +48,4 @@ export class AppComponent {
   async logout() {
     await this.oktaAuth.signOut();
   }
-
-  checkSas
 }

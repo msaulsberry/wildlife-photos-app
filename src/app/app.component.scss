@@ -1,3 +1,31 @@
+@import '../styles.scss';
+
 .header {
-  background-color: lightgray;
+  background-color: $primary-color;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  margin: 10px;
+}
+
+.divider {
+  border-left: 3px solid white;
+  height: 40px;
+  background-color: azure;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  font-size: medium;
+  margin: 0px 20px;
+}
+
+.main-content {
+  margin: 20px;
 }
