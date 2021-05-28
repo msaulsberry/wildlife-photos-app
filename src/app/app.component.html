@@ -5,6 +5,7 @@
   <button class="menu-btn">Species</button>
   <button *ngIf="!isAuthenticated" (click)="login()">Login</button>
   <button *ngIf="isAuthenticated" (click)="logout()">Logout</button>
+  <button *ngIf="!isAuthenticated" [routerLink]="'/signup'">Sign Up</button>
 </div>
 
 <div class="main-content">

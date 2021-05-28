@@ -11,6 +11,8 @@ import { GraphQLModule } from './graphql.module';
 import { FeedComponent } from './feed/feed.component';
 import { PhotoPostComponent } from './feed/photo-post/photo-post.component';
 import { CreatePostComponent } from './feed/create-post/create-post.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
+import { FormsModule } from '@angular/forms';
 
 const oktaConfig = {
   issuer: 'https://dev-72544314.okta.com/oauth2/default',
@@ -25,13 +27,15 @@ const oktaConfig = {
     FeedComponent,
     PhotoPostComponent,
     CreatePostComponent,
+    UserSignupComponent,
   ],
   imports: [
     BrowserModule,
     OktaAuthModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    GraphQLModule
+    GraphQLModule,
+    FormsModule
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: oktaConfig }

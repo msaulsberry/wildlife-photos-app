@@ -1,0 +1,13 @@
+<h1>Sign up for Wildlife Photos</h1>
+
+<label for="email">Email:</label>
+<input type="text" id="email" name="email" [(ngModel)]="user.email" ><br><br>
+
+<label for="fname">First Name:</label>
+<input type="text" id="first" name="first" [(ngModel)]="user.first" ><br><br>
+
+<label for="lname">Last Name:</label>
+<input type="text" id="last" name="last" [(ngModel)]="user.last"><br><br>
+
+<button>Cancel</button>
+<button (click)="submit()">Submit</button>
