@@ -13,6 +13,7 @@ import { PhotoPostComponent } from './feed/photo-post/photo-post.component';
 import { CreatePostComponent } from './feed/create-post/create-post.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { FormsModule } from '@angular/forms';
+import { CreateLocationComponent } from './create-location/create-location.component';
 
 const oktaConfig = {
   issuer: 'https://dev-72544314.okta.com/oauth2/default',
@@ -28,6 +29,7 @@ const oktaConfig = {
     PhotoPostComponent,
     CreatePostComponent,
     UserSignupComponent,
+    CreateLocationComponent,
   ],
   imports: [
     BrowserModule,

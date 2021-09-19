@@ -1,1 +1,33 @@
-<p>create-post works!</p>
+<h3>Post New Wildlife Photo:</h3>
+
+<div>
+  <label>Upload Photo: </label>
+  <input type="file" (change)="onFileSelected($event)" >
+</div>
+<div>
+  <label>Description: </label>
+  <input>
+</div>
+
+<div>
+  <label>Photo Private?: </label>
+  <input type="checkbox">
+</div>
+
+<div>
+  <label>Select Location (Required): </label>
+  <select name="add_location">
+    <option>Yellowstone National Park</option>
+    <option>Thailand</option>
+    <option>Florida</option>
+  </select>
+  <label>  OR  </label>
+  <button>Add New Location</button>
+  
+  <app-create-location></app-create-location>
+</div>
+
+<button>Submit</button>
+
+
+

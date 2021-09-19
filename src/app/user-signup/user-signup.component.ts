@@ -14,7 +14,7 @@ const CREATE_USER = gql `
 @Component({
   selector: 'app-user-signup',
   templateUrl: './user-signup.component.html',
-  styleUrls: ['./user-signup.component.css']
+  styleUrls: ['./user-signup.component.scss']
 })
 export class UserSignupComponent implements OnInit {
 
@@ -42,7 +42,7 @@ export class UserSignupComponent implements OnInit {
         }
       }
     }).subscribe(({ data }) => {
-
+      //handle data coming back
     });
   }
 }

@@ -1,6 +1,6 @@
 <button *ngIf="isAuthenticated" (click)="onCreatePost()">Create Post</button>
 
-<app-create-post *ngIf="isAuthenticated && creatingPost"></app-create-post>
+<app-create-post *ngIf="isAuthenticated "></app-create-post> <!--&& creatingPost-->
 
 
 <!-- <input type="file" (change)="onFileSelected($event)" > -->

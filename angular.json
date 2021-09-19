@@ -119,6 +119,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "wildlife-photos-app"
+    }
+  },
+  "defaultProject": "wildlife-photos-app",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  }
 }
